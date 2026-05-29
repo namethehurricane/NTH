@@ -38,7 +38,6 @@
 						images: {
 							'images/stone triforce glyph rough alt.jpeg': 'center',
 							'images/NTH TRIFORCE STONE ROUGH 2.jpeg': 'center',
-
 						},
 
 					// Delay.
