@@ -36,7 +36,7 @@
 
 					// Images (in the format of 'url': 'alignment').
 						images: {
-							'images/stone triforce glyph rough alt.jpeg': 'center',
+							'images/STONE TRIFORCE GLYPH ROUGH ALT.jpeg': 'center',
 							'images/NTH TRIFORCE STONE ROUGH 2.jpeg': 'center',
 
 						},
