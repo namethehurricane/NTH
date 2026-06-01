@@ -36,20 +36,23 @@
 				flex-shrink: 0;
 			}
 
-			/* Widget player spacing */
+			/* Widget player spacing - significantly increased to prevent overlap */
 			.elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8 {
 				flex-shrink: 0;
-				margin-bottom: 30px;
+				margin-bottom: 150px;
 			}
 
-			/* Sticky Footer */
+			/* Sticky Footer with background to prevent transparency issues */
 			footer {
 				flex-shrink: 0;
-				padding: 20px 10px;
+				padding: 30px 10px;
 				text-align: center;
 				width: 100%;
 				box-sizing: border-box;
 				margin-top: auto;
+				background-color: #ffffff;
+				position: relative;
+				z-index: 10;
 			}
 
 			/* Single horizontal footer layout */
@@ -103,12 +106,11 @@
 			/* Tablet Responsive */
 			@media (max-width: 768px) {
 				footer {
-					padding: 15px 10px;
-					margin-top: 20px;
+					padding: 25px 10px;
 				}
 
 				.elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8 {
-					margin-bottom: 20px;
+					margin-bottom: 120px;
 				}
 
 				footer ul {
@@ -133,12 +135,11 @@
 			/* Mobile Responsive */
 			@media (max-width: 480px) {
 				footer {
-					padding: 10px 5px;
-					margin-top: 15px;
+					padding: 20px 5px;
 				}
 
 				.elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8 {
-					margin-bottom: 15px;
+					margin-bottom: 100px;
 				}
 
 				footer ul {
