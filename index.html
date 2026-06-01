@@ -65,6 +65,34 @@
 				.elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8 { margin-bottom: 3.5rem; }
 				body { padding-bottom: 7.5rem; } /* give extra space on small screens */
 			}
+
+			/* Header image responsive rules */
+			#header {
+				overflow: visible; /* prevent clipping if image is taller */
+				position: relative;
+				padding-top: 1rem;
+				text-align: center;
+			}
+
+			#header h1 { margin: 0; }
+
+			#header h1 img {
+				width: 100%;
+				max-width: 900px; /* limit extremely large images */
+				height: auto;
+				display: block;
+				margin: 0 auto;
+				object-fit: contain;
+				max-height: 60vh; /* prevent running off the top of the screen */
+			}
+
+			@media (max-width: 768px) {
+				#header h1 img { max-width: 95%; max-height: 40vh; }
+			}
+
+			@media (max-width: 420px) {
+				#header h1 img { max-width: 98%; max-height: 35vh; }
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -72,7 +100,7 @@
 		<!-- Header -->
 		<header id="header">
 			<div style="text-align: center;">
-				<h1><img src="NTH Cascade.png" style="max-width:100%;height:auto;"></h1>
+				<h1><img src="NTH Cascade.png" alt="Name The Hurricane" class="site-logo"></h1>
 				<p></p>
 			</div>
 		</header>
