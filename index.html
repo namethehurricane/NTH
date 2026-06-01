@@ -10,43 +10,115 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Responsive Footer */
+			footer {
+				padding: 20px 10px;
+				text-align: center;
+				width: 100%;
+				box-sizing: border-box;
+			}
+
+			/* Responsive List Items */
+			footer ul {
+				list-style: none;
+				padding: 0;
+				margin: 10px 0;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				gap: 15px;
+			}
+
+			footer ul li {
+				display: inline-block;
+				font-size: 14px;
+			}
+
+			footer ul.icons li {
+				margin: 5px;
+			}
+
+			footer ul.icons a {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				width: 40px;
+				height: 40px;
+				transition: transform 0.2s;
+			}
+
+			footer ul.icons a:hover {
+				transform: scale(1.1);
+			}
+
+			/* Mobile Responsive */
+			@media (max-width: 768px) {
+				footer {
+					padding: 15px 10px;
+				}
+
+				footer ul {
+					flex-direction: column;
+					gap: 10px;
+				}
+
+				footer ul li {
+					font-size: 13px;
+					width: 100%;
+				}
+
+				footer ul.icons a {
+					width: 36px;
+					height: 36px;
+					font-size: 18px;
+				}
+			}
+
+			@media (max-width: 480px) {
+				footer {
+					padding: 10px 5px;
+				}
+
+				footer ul li {
+					font-size: 12px;
+				}
+
+				footer ul.icons a {
+					width: 32px;
+					height: 32px;
+					font-size: 16px;
+				}
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 		
 		<!-- Header -->
 		<header id="header">
-			<div style="text-align: center;" 
+			<div style="text-align: center;">
 				<h1><img src="NTH Cascade.png" style="max-width:100%;height:auto;"></h1>
-				<p> <br />
-			</header>
-		<!-- Elfsight Audio Player | Name The Hurricane -->
-<script src="https://elfsightcdn.com/platform.js" async style="max-width:100%;height:auto;"></script>
-<div class="elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8" data-elfsight-app-lazy></div>
+				<p><br /></p>
+			</div>
+		</header>
 
+		<!-- Elfsight Audio Player | Name The Hurricane -->
+		<script src="https://elfsightcdn.com/platform.js" async style="max-width:100%;height:auto;"></script>
+		<div class="elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8" data-elfsight-app-lazy></div>
 
 		<!-- Footer -->
-		   <style>
-  /* CSS code */
-  footer {
-     height: 1px; /* Adjust the height as  your requirements */
-     width: 25%; /* Adjust the width as per your requirements */
-
-    }
-   </style>
-
-</head>
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="https://www.instagram.com/namethehurricane/#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Name The Hurricane</li>
-					<li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</footer>
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="https://www.instagram.com/namethehurricane/#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Name The Hurricane</li>
+				<li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
