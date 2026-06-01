@@ -18,7 +18,7 @@
 				padding: 1.5rem 0;
 				box-sizing: border-box;
 				position: relative;
-				z-index: 20; /* stay on top of any floating widgets */
+				z-index: 0; /* make sure footer does NOT sit above the widget */
 			}
 
 			#footer .footer-links {
@@ -46,24 +46,24 @@
 				font-size: 0.95rem;
 			}
 
-			/* Prevent Elfsight widget from overlapping or touching the footer */
+			/* Keep the Elfsight widget visible and interactive: put it above the footer if they overlap */
 			.elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8 {
 				display: block;
 				position: relative; /* keep it in normal flow */
-				z-index: 0;
-				margin-bottom: 3rem; /* space between widget and footer; adjust as needed */
+				z-index: 50; /* ensure widget receives pointer events if overlap happens */
+				margin-bottom: 5rem; /* increase gap between widget and footer */
 			}
 
 			/* If the widget injects a fixed bar anchored to the bottom, add safe padding */
-			body { padding-bottom: 4.5rem; }
+			body { padding-bottom: 6rem; }
 
-			/* Small screens: reduce spacing */
+			/* Small screens: reduce spacing but keep safe gap */
 			@media (max-width: 480px) {
 				#footer { padding: 1rem 0; }
 				#footer .footer-links { gap: 0.5rem; }
 				#footer .footer-copy { gap: 0.5rem; font-size: 0.9rem; }
-				.elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8 { margin-bottom: 2rem; }
-				body { padding-bottom: 5.5rem; } /* give extra space on small screens */
+				.elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8 { margin-bottom: 3.5rem; }
+				body { padding-bottom: 7.5rem; } /* give extra space on small screens */
 			}
 		</style>
 	</head>
