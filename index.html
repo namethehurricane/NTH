@@ -11,46 +11,65 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* Full page layout with sticky footer */
+			/* Fixed layout - no scrolling */
 			html, body {
 				height: 100%;
 				margin: 0;
-				display: flex;
-				flex-direction: column;
+				overflow: hidden;
 			}
 
-			body {
-				display: flex;
-				flex-direction: column;
-				min-height: 100vh;
-			}
-
-			/* Main content area that grows to fill space */
-			main {
-				flex: 1;
-				display: flex;
-				flex-direction: column;
-			}
-
-			/* Header */
+			/* Fixed Header at top */
 			header {
-				flex-shrink: 0;
-			}
-
-			/* Widget player spacing */
-			.elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8 {
-				flex-shrink: 0;
-				margin-bottom: 80px;
-			}
-
-			/* Sticky Footer - no background */
-			footer {
-				flex-shrink: 0;
-				padding: 30px 10px;
-				text-align: center;
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
 				width: 100%;
 				box-sizing: border-box;
-				margin-top: auto;
+				z-index: 100;
+				padding: 15px 0;
+				background-color: transparent;
+			}
+
+			header h1 {
+				margin: 0;
+				padding: 0;
+			}
+
+			header h1 img {
+				max-width: 100%;
+				height: auto;
+				display: block;
+			}
+
+			header p {
+				margin: 0;
+				padding: 0;
+			}
+
+			/* Fixed Widget Player in middle */
+			.elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8 {
+				position: fixed;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				z-index: 50;
+				width: 100%;
+				max-width: 100%;
+				box-sizing: border-box;
+			}
+
+			/* Fixed Footer at bottom */
+			footer {
+				position: fixed;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				width: 100%;
+				box-sizing: border-box;
+				z-index: 100;
+				padding: 20px 10px;
+				text-align: center;
 			}
 
 			/* Single horizontal footer layout */
@@ -103,12 +122,17 @@
 
 			/* Tablet Responsive */
 			@media (max-width: 768px) {
-				footer {
-					padding: 25px 10px;
+				header {
+					padding: 10px 0;
 				}
 
-				.elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8 {
-					margin-bottom: 70px;
+				header h1 img {
+					max-width: 90%;
+					margin: 0 auto;
+				}
+
+				footer {
+					padding: 15px 10px;
 				}
 
 				footer ul {
@@ -132,17 +156,21 @@
 
 			/* Mobile Responsive */
 			@media (max-width: 480px) {
-				footer {
-					padding: 20px 5px;
+				header {
+					padding: 8px 0;
 				}
 
-				.elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8 {
-					margin-bottom: 60px;
+				header h1 img {
+					max-width: 80%;
+					margin: 0 auto;
+				}
+
+				footer {
+					padding: 10px 5px;
 				}
 
 				footer ul {
 					gap: 10px;
-					flex-direction: row;
 				}
 
 				footer ul li {
@@ -163,19 +191,17 @@
 	</head>
 	<body class="is-preload">
 		
-		<main>
-			<!-- Header -->
-			<header id="header">
-				<div style="text-align: center;">
-					<h1><img src="NTH Cascade.png" style="max-width:100%;height:auto;"></h1>
-					<p><br /></p>
-				</div>
-			</header>
+		<!-- Header -->
+		<header id="header">
+			<div style="text-align: center;">
+				<h1><img src="NTH Cascade.png" style="max-width:100%;height:auto;"></h1>
+				<p><br /></p>
+			</div>
+		</header>
 
-			<!-- Elfsight Audio Player | Name The Hurricane -->
-			<script src="https://elfsightcdn.com/platform.js" async style="max-width:100%;height:auto;"></script>
-			<div class="elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8" data-elfsight-app-lazy></div>
-		</main>
+		<!-- Elfsight Audio Player | Name The Hurricane -->
+		<script src="https://elfsightcdn.com/platform.js" async style="max-width:100%;height:auto;"></script>
+		<div class="elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8" data-elfsight-app-lazy></div>
 
 		<!-- Footer -->
 		<footer id="footer">
