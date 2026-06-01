@@ -11,37 +11,45 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* Footer styling: full width, center items, remove separators */
+			/* Footer styling: full width, center items, keep links active */
 			#footer {
 				width: 100%;
 				text-align: center;
 				padding: 1.5rem 0;
+				box-sizing: border-box;
 			}
 
-			#footer ul {
-				list-style: none;
-				margin: 0;
-				padding: 0;
+			#footer .footer-links {
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				flex-wrap: wrap;
 				gap: 1rem;
+				margin-bottom: 0.75rem;
 			}
 
-			#footer ul li {
-				margin: 0;
-				padding: 0;
+			#footer .footer-links a {
+				display: inline-block;
+				text-decoration: none;
+				color: inherit;
+				padding: 0.25rem 0.5rem;
 			}
 
-			/* Ensure there are no visual separators like "|" between list items */
-			#footer ul li::before,
-			#footer ul li::after {
-				content: none !important;
+			#footer .footer-copy {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+				gap: 0.75rem;
+				font-size: 0.95rem;
 			}
 
-			/* Make links inherit color and remove default underlines if desired */
-			#footer a { text-decoration: none; color: inherit; }
+			/* Small screens: reduce spacing */
+			@media (max-width: 480px) {
+				#footer { padding: 1rem 0; }
+				#footer .footer-links { gap: 0.5rem; }
+				#footer .footer-copy { gap: 0.5rem; font-size: 0.9rem; }
+			}
 		</style>
 	</head>
 	<body class="is-preload">
@@ -61,13 +69,14 @@
 
 		<!-- Footer -->
 		<footer id="footer">
-			<ul class="icons">
-				<li><a href="https://www.instagram.com/namethehurricane/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-			</ul>
-			<ul class="copyright">
-				<li>&copy; Name The Hurricane</li>
-				<li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
+			<div class="footer-links">
+				<a href="https://www.instagram.com/namethehurricane/" class="icon brands fa-instagram"><span class="label">Instagram</span></a>
+				<!-- add more links here as plain anchors -->
+			</div>
+			<div class="footer-copy">
+				<span>&copy; Name The Hurricane</span>
+				<span>Credits: <a href="http://html5up.net">HTML5 UP</a></span>
+			</div>
 		</footer>
 
 		<!-- Scripts -->
