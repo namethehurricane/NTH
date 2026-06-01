@@ -1,0 +1,30 @@
+/* Widget overlay: fixed on screen and constrained so it can't push header/footer off-screen */
+.elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8 {
+  position: fixed !important;
+  right: 1rem;
+  bottom: calc(var(--footer-height, 56px) + 0.75rem);
+  width: min(420px, 92vw);
+  max-height: calc(100vh - var(--header-height, 80px) - var(--footer-height, 56px) - 2rem);
+  overflow: auto;
+  z-index: 10;
+  background: transparent;
+  pointer-events: auto;
+  transition: transform 0.18s ease, opacity 0.12s ease;
+}
+
+/* Keep header and footer above the widget visually */
+#header, #footer {
+  position: relative;
+  z-index: 20;
+}
+
+@media (max-width: 480px) {
+  .elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8 {
+    right: 0.5rem;
+    width: calc(100vw - 1rem);
+    bottom: calc(var(--footer-height, 56px) + 0.5rem);
+    max-height: calc(100vh - var(--header-height, 64px) - var(--footer-height, 56px) - 1.5rem);
+  }
+}
+
+/* JS will set these CSS variables; fallback values are provided above */
