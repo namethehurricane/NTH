@@ -10,43 +10,68 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<style>
+			/* Footer styling: full width, center items, remove separators */
+			#footer {
+				width: 100%;
+				text-align: center;
+				padding: 1.5rem 0;
+			}
+
+			#footer ul {
+				list-style: none;
+				margin: 0;
+				padding: 0;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-wrap: wrap;
+				gap: 1rem;
+			}
+
+			#footer ul li {
+				margin: 0;
+				padding: 0;
+			}
+
+			/* Ensure there are no visual separators like "|" between list items */
+			#footer ul li::before,
+			#footer ul li::after {
+				content: none !important;
+			}
+
+			/* Make links inherit color and remove default underlines if desired */
+			#footer a { text-decoration: none; color: inherit; }
+		</style>
 	</head>
 	<body class="is-preload">
 		
 		<!-- Header -->
 		<header id="header">
-			<div style="text-align: center;" 
+			<div style="text-align: center;">
 				<h1><img src="NTH Cascade.png" style="max-width:100%;height:auto;"></h1>
-				<p> <br />
-			</header>
+				<p></p>
+			</div>
+		</header>
+
 		<!-- Elfsight Audio Player | Name The Hurricane -->
-<script src="https://elfsightcdn.com/platform.js" async style="max-width:100%;height:auto;"></script>
-<div class="elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8" data-elfsight-app-lazy></div>
+		<script src="https://elfsightcdn.com/platform.js" async style="max-width:100%;height:auto;"></script>
+		<div class="elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8" data-elfsight-app-lazy></div>
 
 
 		<!-- Footer -->
-		   <style>
-  /* CSS code */
-  footer {
-     height: 1px; /* Adjust the height as  your requirements */
-     width: 25%; /* Adjust the width as per your requirements */
-
-    }
-   </style>
-
-</head>
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="https://www.instagram.com/namethehurricane/#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-				</ul>
-				<ul class="copyright">
-					<li>&copy; Name The Hurricane</li>
-					<li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
-				</ul>
-			</footer>
+		<footer id="footer">
+			<ul class="icons">
+				<li><a href="https://www.instagram.com/namethehurricane/" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Name The Hurricane</li>
+				<li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+			</ul>
+		</footer>
 
 		<!-- Scripts -->
-			<script src="assets/js/main.js"></script>
+		<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
