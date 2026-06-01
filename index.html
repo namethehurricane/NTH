@@ -10,213 +10,43 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
-		<style>
-			/* Fixed layout - no scrolling */
-			html, body {
-				height: 100%;
-				margin: 0;
-				overflow: hidden;
-			}
-
-			/* Fixed Header at top */
-			header {
-				position: fixed;
-				top: 0;
-				left: 0;
-				right: 0;
-				width: 100%;
-				box-sizing: border-box;
-				z-index: 100;
-				padding: 15px 0;
-				background-color: transparent;
-			}
-
-			header h1 {
-				margin: 0;
-				padding: 0;
-			}
-
-			header h1 img {
-				max-width: 100%;
-				height: auto;
-				display: block;
-			}
-
-			header p {
-				margin: 0;
-				padding: 0;
-			}
-
-			/* Fixed Widget Player in middle */
-			.elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8 {
-				position: fixed;
-				top: 50%;
-				left: 50%;
-				transform: translate(-50%, -50%);
-				z-index: 50;
-				width: 100%;
-				max-width: 100%;
-				box-sizing: border-box;
-			}
-
-			/* Fixed Footer at bottom */
-			footer {
-				position: fixed;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				width: 100%;
-				box-sizing: border-box;
-				z-index: 100;
-				padding: 20px 10px;
-				text-align: center;
-			}
-
-			/* Single horizontal footer layout */
-			footer ul {
-				list-style: none;
-				padding: 0;
-				margin: 0;
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-				align-items: center;
-				gap: 20px;
-			}
-
-			footer ul li {
-				display: inline-block;
-				font-size: 14px;
-				white-space: nowrap;
-			}
-
-			footer ul.icons li {
-				margin: 0;
-			}
-
-			footer ul.icons a {
-				display: inline-flex;
-				align-items: center;
-				justify-content: center;
-				width: 40px;
-				height: 40px;
-				transition: transform 0.2s;
-			}
-
-			footer ul.icons a:hover {
-				transform: scale(1.1);
-			}
-
-			footer ul.copyright li {
-				font-size: 13px;
-			}
-
-			footer ul.copyright a {
-				text-decoration: none;
-				transition: opacity 0.2s;
-			}
-
-			footer ul.copyright a:hover {
-				opacity: 0.7;
-			}
-
-			/* Tablet Responsive */
-			@media (max-width: 768px) {
-				header {
-					padding: 10px 0;
-				}
-
-				header h1 img {
-					max-width: 90%;
-					margin: 0 auto;
-				}
-
-				footer {
-					padding: 15px 10px;
-				}
-
-				footer ul {
-					gap: 15px;
-				}
-
-				footer ul li {
-					font-size: 13px;
-				}
-
-				footer ul.icons a {
-					width: 36px;
-					height: 36px;
-					font-size: 18px;
-				}
-
-				footer ul.copyright li {
-					font-size: 12px;
-				}
-			}
-
-			/* Mobile Responsive */
-			@media (max-width: 480px) {
-				header {
-					padding: 8px 0;
-				}
-
-				header h1 img {
-					max-width: 80%;
-					margin: 0 auto;
-				}
-
-				footer {
-					padding: 10px 5px;
-				}
-
-				footer ul {
-					gap: 10px;
-				}
-
-				footer ul li {
-					font-size: 12px;
-				}
-
-				footer ul.icons a {
-					width: 32px;
-					height: 32px;
-					font-size: 16px;
-				}
-
-				footer ul.copyright li {
-					font-size: 11px;
-				}
-			}
-		</style>
 	</head>
 	<body class="is-preload">
 		
 		<!-- Header -->
 		<header id="header">
-			<div style="text-align: center;">
+			<div style="text-align: center;" 
 				<h1><img src="NTH Cascade.png" style="max-width:100%;height:auto;"></h1>
-				<p><br /></p>
-			</div>
-		</header>
-
+				<p> <br />
+			</header>
 		<!-- Elfsight Audio Player | Name The Hurricane -->
-		<script src="https://elfsightcdn.com/platform.js" async style="max-width:100%;height:auto;"></script>
-		<div class="elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8" data-elfsight-app-lazy></div>
+<script src="https://elfsightcdn.com/platform.js" async style="max-width:100%;height:auto;"></script>
+<div class="elfsight-app-2fc9fbf5-210e-4c92-9809-0f874fd819d8" data-elfsight-app-lazy></div>
+
 
 		<!-- Footer -->
-		<footer id="footer">
-			<ul class="icons">
-				<li><a href="https://www.instagram.com/namethehurricane/#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-			</ul>
-			<ul class="copyright">
-				<li>&copy; Name The Hurricane</li>
-				<li>|</li>
-				<li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
-			</ul>
-		</footer>
+		   <style>
+  /* CSS code */
+  footer {
+     height: 1px; /* Adjust the height as  your requirements */
+     width: 25%; /* Adjust the width as per your requirements */
+
+    }
+   </style>
+
+</head>
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://www.instagram.com/namethehurricane/#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+				</ul>
+				<ul class="copyright">
+					<li>&copy; Name The Hurricane</li>
+					<li>Credits: <a href="http://html5up.net">HTML5 UP</a></li>
+				</ul>
+			</footer>
 
 		<!-- Scripts -->
-		<script src="assets/js/main.js"></script>
+			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>
